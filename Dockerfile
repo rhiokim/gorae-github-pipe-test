@@ -1,6 +1,6 @@
 FROM mhart/alpine-node:7
 # FROM node:latest
-MAINTAINER [Rhio Kim <rhio.kim@gmail.com>
+MAINTAINER [Rhio Kim <rhio.kim@gmail.com>]
 
 RUN apk add --no-cache curl
 
@@ -9,7 +9,7 @@ COPY index.js index.js
 COPY package.json package.json
 
 RUN npm --quiet --no-color install
-RUN rm -rf /root/.npm && npm uninstall -g npm
+RUN rm -rf /root/.npm
 
 ENV PORT 7777
 
