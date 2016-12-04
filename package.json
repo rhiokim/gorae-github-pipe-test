@@ -1,14 +1,14 @@
 {
   "name": "gorae-github-pipe-test",
-  "version": "1.0.7",
+  "version": "1.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node .",
-    "docker:images": "docker images | grep gorae",
-    "docker:run": "docker run -dit -env PORT=7777 -p 7778:7777 -v /var/run/docker.sock:/var/run/docker.sock  --name gorae-github-pipe gorae-github-pipe:latest",
-    "docker:build": "docker build --tag gorae-github-pipe . && npm run docker:images"
+    "docker:images": "docker images | grep gorae-github-pipe-test",
+    "docker:run": "docker run -dit -env PORT=7777 -p 7778:7777 -v /var/run/docker.sock:/var/run/docker.sock  --name gorae-github-pipe-test gorae-github-pipe-test:latest",
+    "docker:build": "docker build --tag gorae-github-pipe-test . && npm run docker:images"
   },
   "repository": {
     "type": "git",
